@@ -1,5 +1,10 @@
-import 'package:flutter/material.dart';
+// ignore_for_file: sort_child_properties_last
 
+import 'package:flutter/material.dart';
+import 'package:flutter_awesome_app/views/signup_ui.dart';
+import 'login_ui.dart';
+
+// ignore_for_file: prefer_const_constructors
 class HomeUi extends StatelessWidget {
   const HomeUi({super.key});
 
@@ -53,7 +58,14 @@ class HomeUi extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LoginUi(),
+                      ),
+                    );
+                  },
                   child: Text(
                     'LOGIN',
                     style: TextStyle(
@@ -75,7 +87,14 @@ class HomeUi extends StatelessWidget {
                   width: 15.0,
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SignupUi(),
+                      ),
+                    );
+                  },
                   child: Text(
                     'SIGN UP',
                     style: TextStyle(
@@ -93,7 +112,7 @@ class HomeUi extends StatelessWidget {
                     ),
                     backgroundColor: Colors.black,
                   ),
-                )
+                ),
               ],
             )
           ],
